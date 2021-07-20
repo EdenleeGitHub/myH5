@@ -16,13 +16,14 @@ export default {
   name: 'home',
   data () {
     return {
-      active: 0
+      active: 0,
+      show1: false
     }
   },
   methods: {
     get (val) {
       // console.log(val)
-      // console.log(this.$route)
+      // this.active = val
     }
   }
 }

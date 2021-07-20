@@ -8,7 +8,9 @@ import FOOTER from './components/footerTabar.vue'
 import bus from './utils/index'
 
 Vue.config.productionTip = false
-Vue.use(Vant, bus)
+Vue.use(Vant)
+Vue.use(bus)
+
 Vue.component('FOOTER', FOOTER)
 
 new Vue({

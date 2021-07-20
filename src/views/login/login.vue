@@ -111,8 +111,10 @@ export default {
   background-size: 100% 100%;
   .content {
     width: 300px;
-    margin-top: 200px;
-    margin-left: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
   ::v-deep .van-field {
     border-radius: 3px;

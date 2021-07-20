@@ -60,7 +60,7 @@ router.beforeEach((to, form, next) => {
   const token = JSON.parse(localStorage.getItem('token'))
   // console.log(token)
   if (
-    (!token || new Date().getTime() - Number(token.Times) > 600000) &&
+    (!token || new Date().getTime() - Number(token.Times) > 6000000) &&
     form.path !== '/login' &&
     to.path !== '/login'
   ) {
@@ -70,7 +70,7 @@ router.beforeEach((to, form, next) => {
   } else {
     if (
       token &&
-      new Date().getTime() - Number(token.Times) < 600000 &&
+      new Date().getTime() - Number(token.Times) < 6000000 &&
       ['/register', '/login', '/retrieve'].includes(to.path)
     ) {
       next('/')
