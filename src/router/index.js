@@ -60,7 +60,7 @@ router.beforeEach((to, form, next) => {
   const token = JSON.parse(localStorage.getItem('token'))
   // console.log(token)
   if (
-    (!token || new Date().getTime() - Number(token.Times) > 6000000) &&
+    (!token || new Date().getTime() - Number(token.Times) > 6000) &&
     form.path !== '/login' &&
     to.path !== '/login'
   ) {
@@ -68,11 +68,7 @@ router.beforeEach((to, form, next) => {
     Toast('您尚未登陆或登录过期，请先登录！')
     next('/login')
   } else {
-    if (
-      token &&
-      new Date().getTime() - Number(token.Times) < 6000000 &&
-      ['/register', '/login', '/retrieve'].includes(to.path)
-    ) {
+    if (['/register', '/login', '/retrieve'].includes(to.path)) {
       next('/')
     } else {
       next()
