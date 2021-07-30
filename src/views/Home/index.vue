@@ -20,8 +20,8 @@
         /></van-swipe-item>
       </van-swipe>
       <div class="content2">
-        <div>距离考试还有<span>88</span> 天</div>
-        <div>坚持学习<span>17</span> 天 <i class="iconfont">&#xe600;</i></div>
+        <div>距离考试还有 <span>88</span> 天</div>
+        <div>坚持学习 <span>17</span> 天 <i class="iconfont">&#xe600;</i></div>
       </div>
       <div>
         <van-grid :border="false">
