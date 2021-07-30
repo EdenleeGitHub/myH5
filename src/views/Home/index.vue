@@ -37,7 +37,7 @@
         <div>今日直播公开课</div>
         <div>查看更多 ></div>
       </div>
-      {{ this.$store.state.show1 + '----' }}
+      {{ $store.state.show1 + '----' }}
     </div>
     <!-- 弹出层 -->
     <van-popup v-model="show" position="top" :style="{ height: '50%' }">
